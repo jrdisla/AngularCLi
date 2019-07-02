@@ -1,6 +1,6 @@
 module.exports = function(){
 	var config = {
-		allTs: './app/**/*.ts',
+		allTs: 'src/**/*.ts',
 		typings: './typings/**/*.d.ts',
 		tsOutputPath: './app/'
 	};
