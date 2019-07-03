@@ -2,7 +2,7 @@ import * as tslib_1 from "tslib";
 import { Component } from '@angular/core';
 let AppComponent = class AppComponent {
     constructor() {
-        this.title = 'AngularCLi';
+        this.title = 'Local Events App';
     }
 };
 AppComponent = tslib_1.__decorate([
