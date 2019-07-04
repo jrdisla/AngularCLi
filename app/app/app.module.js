@@ -4,12 +4,14 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { EventListComponent } from '../events/event-list.component';
 import { FormsModule } from '@angular/forms';
+import { EventFilterPipe } from '../events/event-list.pipe';
+import { ThumbComponent } from '../shared/thumb.component';
 let AppModule = class AppModule {
 };
 AppModule = tslib_1.__decorate([
     NgModule({
         declarations: [
-            AppComponent, EventListComponent
+            AppComponent, EventListComponent, EventFilterPipe, ThumbComponent
         ],
         imports: [
             BrowserModule,

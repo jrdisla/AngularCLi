@@ -52,7 +52,9 @@
             <td>{{item.code}}</td>
             <td>{{item.date}}</td>
             <td>{{item.fee | currency: 'USD': true:'1.2-4'}}</td>
-            <td><app-awcomponent></app-awcomponent></td>
+            <td>
+              <app-awcomponent [rating]='item.rating'></app-awcomponent>
+            </td>
           </tr>
           </tbody>
 
