@@ -53,7 +53,9 @@
             <td>{{item.date}}</td>
             <td>{{item.fee | currency: 'USD': true:'1.2-4'}}</td>
             <td>
-              <app-awcomponent [rating]='item.rating'></app-awcomponent>
+              <app-awcomponent [rating]='item.rating'
+              (ratingClicked)="onRatingClicked($event)">
+              </app-awcomponent>
             </td>
           </tr>
           </tbody>

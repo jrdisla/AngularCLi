@@ -1,4 +1,4 @@
-import {Component, Input, OnChanges} from '@angular/core';
+import {Component, EventEmitter, Input, OnChanges, Output} from '@angular/core';
 
 @Component({
   selector: 'app-awcomponent',
@@ -8,10 +8,18 @@ import {Component, Input, OnChanges} from '@angular/core';
 export class ThumbComponent {
   @Input() rating: number;
   thumbWidth: number;
-  change(): void{
-    this.thumbWidth = this.rating * 86 / 5;
+  @Output() ratingClicked: EventEmitter<string> = new EventEmitter();
+  change(): void {
+    if (this.rating === 0) {
+      this.thumbWidth = 0;
+    } else {
+      this.thumbWidth = this.rating * 26 / 5;
+    }
   }
   ngOnchanges(): void {
-    this.thumbWidth = this.rating * 86 / 5;
+    this.thumbWidth = this.rating * 26 / 5;
+  }
+  onClick() {
+    this.ratingClicked.emit(`The rating ${this.rating} was clicked.`);
   }
 }
