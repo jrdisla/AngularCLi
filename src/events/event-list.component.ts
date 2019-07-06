@@ -22,7 +22,7 @@ export class EventListComponent implements OnInit {
     this.showIma = !this.showIma;
   }
   ngOnInit(): void {
-    this.events = this.eventService.getEvents();
+    this.eventService.getEvents().subscribe(events => this.events = events)
   }
   onRatingClicked(message: string): void {
     this.pageTitle = 'Event List: ' + message;

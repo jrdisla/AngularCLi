@@ -6,6 +6,7 @@ import { EventListComponent } from '../events/event-list.component';
 import { FormsModule } from '@angular/forms';
 import { EventFilterPipe } from '../events/event-list.pipe';
 import { ThumbComponent } from '../shared/thumb.component';
+import { HttpClientModule } from "@angular/common/http";
 let AppModule = class AppModule {
 };
 AppModule = tslib_1.__decorate([
@@ -15,7 +16,8 @@ AppModule = tslib_1.__decorate([
         ],
         imports: [
             BrowserModule,
-            FormsModule
+            FormsModule,
+            HttpClientModule
         ],
         providers: [],
         bootstrap: [AppComponent]

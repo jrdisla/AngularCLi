@@ -6,6 +6,7 @@ import {EventListComponent} from '../events/event-list.component';
 import {FormsModule} from '@angular/forms';
 import {EventFilterPipe} from '../events/event-list.pipe';
 import {ThumbComponent} from '../shared/thumb.component';
+import {HttpClientModule} from "@angular/common/http";
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import {ThumbComponent} from '../shared/thumb.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
